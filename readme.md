@@ -20,4 +20,4 @@ $cov = covconv($ja);
 - いくらなんでも `preg_replace` しまくるのは賢くない
 
 ## 謝辞
-@kencov氏(https://twitter.com/kencov) に感謝。
+@kenkov氏(https://twitter.com/kenkov) に感謝。
