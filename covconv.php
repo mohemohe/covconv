@@ -55,14 +55,17 @@ $str = str_replace("ハイパー", "はいぱー", $str);
 $str = preg_replace("/(マックブック)|(mac mini)|(macmini)/ui", "ﾏｯﾖﾐﾆ", $str);
 $str = preg_replace("/(マックブック)|(macbook)/ui", "ﾏｯﾖﾌﾞｯｸ", $str);
 
+$str = preg_replace("/(アーチ)|(arch)/ui", "ｱﾁｮｰ", $str);
 $str = preg_replace("/(エックスビデオズ)|(エックスビデオ)|(xvideos)|(xvideo)/ui", "ｴｸｽｳﾞｨﾃﾞｵｽﾞ", $str);
 $str = preg_replace("/(ギットハブ)|(github)/ui", "ｷﾞｯﾖﾊﾟﾌﾞ", $str);
 $str = preg_replace("/(ジャバスクリプト)|(javascript)/ui", "ｼﾞｬｳﾞｧｽｸｲﾌﾟﾖ", $str);
 $str = preg_replace("/(ツイッター)|(twitter)/ui", "ﾂｲｯﾀ", $str);
 $str = preg_replace("/(ツイート)|(tweet)/ui", "ﾂｲｯﾖ", $str);
+$str = preg_replace("/(バーチャルボックス)|(virtualbox)|(virtual box)/ui", "ﾊﾞﾁｬｰﾙﾎﾞｸｽ", $str);
 $str = preg_replace("/(マック)|(mac)/ui", "ﾏｯﾖ", $str);
 $str = preg_replace("/(メソッド)|(メゾット)/u", "ﾒｿｯﾖ", $str);
-$str = preg_replace("/(バーチャルボックス)|(virtualbox)|(virtual box)/ui", "ﾊﾞﾁｬｰﾙﾎﾞｸｽ", $str);
+$str = preg_replace("/(リナックス)|(linux)/ui", "ﾘﾅｸｽ", $str);
+
 
 ////ここだけは外せない
 $str = preg_replace("/(ぱんつ)|(パンツ)/u", "かぼちゃおぱんつ", $str);
@@ -85,7 +88,7 @@ $str = preg_replace("/(\r)/u","っ$1", $str);
 
 /**** ここから試験実装 ****/
 
-////「アル」を「オルに変換」
+////「アル」を「オル」に変換
 $str = preg_replace("/アル([カ-コガ-ゴ])/u","ｵﾙ$1", $str);
 $str = preg_replace("/アル/u","ｱﾖ", $str);
 
@@ -111,7 +114,10 @@ $str = preg_replace("/([ァ-ヶ])ショ([ァ-ヶ])/u","$1ﾖ$2", $str);
 $str = preg_replace("/(リン)([ァ-ヶ])/u","$1ﾎﾟ", $str);
 
 ////「リング」「ニング」などの「～ing系を」を「○ﾝｯ」に変換
-$str = preg_replace("/([イキシチニヒミリ])ング/u","$1ﾝｯ", $str);
+$str = preg_replace("/([イキシチニヒミリギジヂビピ])ング/u","$1ﾝｯ", $str);
+
+////「ー（長音）」を「ｯ」に変換
+$str = str_replace("ー", "ｯ", $str);
 
 ////残りの全角カナを全部半角カナにする
 $str = mb_convert_kana($str,"k","UTF-8");
