@@ -8,11 +8,13 @@ http //www.opensource.org/licenses/mit-license.php
 function covconv($str) {
 
 ////ひたすら列挙
-$str = str_replace("アルゴリズム", "ｵﾙﾖﾘｽﾞﾑ", $str);
+//$str = str_replace("アルゴリズム", "ｵﾙﾖﾘｽﾞﾑ", $str);
 $str = str_replace("ウェブ", "ｳｪｯﾌﾞ", $str);
 $str = str_replace("エナジードリンク", "ｴﾅﾖｰﾄﾞﾘﾝﾎﾟ", $str);
+$str = str_replace("カップル", "ｶﾌﾟﾙ", $str);
 //$str = str_replace("キーボード", "ｷｰﾎﾞｰﾖ", $str);
 $str = preg_replace("/きめ(.)|キメ(.)/u", "ｷﾒ$1", $str);
+$str = str_replace("コンクリート", "ｺﾝｸﾘｯﾖ", $str);
 $str = preg_replace("/(サイコロ)|(さいころ)/u", "ｻｲｺﾖ", $str);
 //$str = str_replace("システム", "ｼｽﾖﾑ", $str);
 //$str = str_replace("シンクパッド", "ｼﾝｸﾊﾟｯﾖ", $str);
@@ -28,6 +30,8 @@ $str = str_replace("テンション", "ﾃﾝﾖﾝ", $str);
 $str = str_replace("ディスプレイ", "ﾃﾞｨｽﾌﾟﾖｲ", $str);
 $str = str_replace("テーブル", "ﾃｰﾌﾞﾕ", $str);
 //$str = preg_replace("/(トラックパッド)|(トラックパット)/u", "ﾄﾗｯｸﾊﾟｯﾖ", $str);
+$str = str_replace("バイオリン", "ﾊﾞｲﾖﾘﾝ", $str);
+$str = str_replace("ハッカソン", "ﾊｯｶﾖﾝ", $str);
 //$str = str_replace("バッテリー", "ﾊﾞｯﾖﾘｰ", $str);
 $str = str_replace("バージョン", "ﾊﾞｼﾞﾖﾝ", $str);
 $str = preg_replace("/(ビヤガーデン)|(ビアガーデン)/u", "ﾋﾞﾔｶﾞﾃﾞｯﾑ", $str);
@@ -55,6 +59,7 @@ $str = str_replace("ハイパー", "はいぱー", $str);
 $str = preg_replace("/(マックブック)|(mac mini)|(macmini)/ui", "ﾏｯﾖﾐﾆ", $str);
 $str = preg_replace("/(マックブック)|(macbook)/ui", "ﾏｯﾖﾌﾞｯｸ", $str);
 
+$str = preg_replace("/(アイフォーン)|(iPhone)/ui", "ｱｲﾋｮｰﾝ", $str);
 $str = preg_replace("/(アーチ)|(arch)/ui", "ｱﾁｮｰ", $str);
 $str = preg_replace("/(エックスビデオズ)|(エックスビデオ)|(xvideos)|(xvideo)/ui", "ｴｸｽｳﾞｨﾃﾞｵｽﾞ", $str);
 $str = preg_replace("/(ギットハブ)|(github)/ui", "ｷﾞｯﾖﾊﾟﾌﾞ", $str);
@@ -89,37 +94,38 @@ $str = preg_replace("/(\r)/u","っ$1", $str);
 /**** ここから試験実装 ****/
 
 ////「アル」を「オル」に変換
-$str = preg_replace("/アル([カ-コガ-ゴ])/u","ｵﾙ$1", $str);
-$str = preg_replace("/アル/u","ｱﾖ", $str);
+$str = preg_replace("/アル([カ-コガ-ゴ])/u","オル$1", $str);
+$str = preg_replace("/アル/u","アヨ", $str);
 
 ////「○ﾖ」に変換 
-$str = preg_replace("/([ァ-ヶー])ト/u","$1ﾖ", $str);
-$str = preg_replace("/([ァ-ヶー])ド/u","$1ﾖ", $str);
-$str = preg_replace("/([ァ-ヶー])ゴ/u","$1ﾖ", $str);
-$str = preg_replace("/([ァ-ヶー])テ/u","$1ﾖ", $str);
+$str = preg_replace("/([ァ-ヶー])ト/u","$1ヨ", $str);
+$str = preg_replace("/([ァ-ヶー])ド/u","$1ヨ", $str);
+$str = preg_replace("/([ァ-ヶー])ゴ/u","$1ヨ", $str);
+$str = preg_replace("/([ァ-ヶー])テ/u","$1ヨ", $str);
 
 ////「○ース」を「ｰﾕ」に変換
-$str = preg_replace("/([ァ-ヶ])ース/u","$1ｰﾕ", $str);
+$str = preg_replace("/([ァ-ヶ])ース/u","$1ーユ", $str);
 
 ////「○テ○」を「○ﾃﾑ」に変換
-$str = preg_replace("/([ァ-ヶ])テ[ァ-ヶ]/u","$1ﾃﾑ", $str);
+$str = preg_replace("/([ァ-ヶ])テ[ァ-ヶ]/u","$1テム", $str);
 
 ////「○ロ○」を「○ﾔ○」に変換
-$str = preg_replace("/([ァ-ヶ])ロ([ァ-ヶ])/u","$1ﾔ$2", $str);
+$str = preg_replace("/([ァ-ヶ])ロ([ァ-ヶ])/u","$1ヤ$2", $str);
 
 ////「○ショ○」を「○ﾖ○」に変換
-$str = preg_replace("/([ァ-ヶ])ショ([ァ-ヶ])/u","$1ﾖ$2", $str);
+$str = preg_replace("/([ァ-ヶ])ショ([ァ-ヶ])/u","$1ヨ$2", $str);
 
 ////「リン○」を「ﾘﾝﾎﾟ」に変換
-$str = preg_replace("/(リン)([ァ-ヶ])/u","$1ﾎﾟ", $str);
+$str = preg_replace("/(リン)([ァ-ヶ])/u","$1ポ", $str);
 
 ////「リング」「ニング」などの「～ing系を」を「○ﾝｯ」に変換
-$str = preg_replace("/([イキシチニヒミリギジヂビピ])ング/u","$1ﾝｯ", $str);
+$str = preg_replace("/([イキシチニヒミリギジヂビピ])ング/u","$1ンッ", $str);
 
 ////「ー（長音）」を「ｯ」に変換
-$str = str_replace("ー", "ｯ", $str);
+//誤爆が多いのでコメントアウトします
+//$str = str_replace("ー", "ッ", $str);
 
-////残りの全角カナを全部半角カナにする
+////全角カナを全て半角カナにする
 $str = mb_convert_kana($str,"k","UTF-8");
 
 /**** ここまで試験実装 ****/
