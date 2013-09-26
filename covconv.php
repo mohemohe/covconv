@@ -8,15 +8,18 @@ http //www.opensource.org/licenses/mit-license.php
 function covconv($str) {
 
 ////ひたすら列挙
+$str = str_replace("アイコン", "ｱｲﾖﾝ", $str);
 //$str = str_replace("アルゴリズム", "ｵﾙﾖﾘｽﾞﾑ", $str);
 $str = str_replace("ウェブ", "ｳｪｯﾌﾞ", $str);
 $str = str_replace("エナジードリンク", "ｴﾅﾖｰﾄﾞﾘﾝﾎﾟ", $str);
 $str = str_replace("カップル", "ｶﾌﾟﾙ", $str);
+$str = str_replace("カーテン", "ｶｰｯﾃﾝ", $str);
 //$str = str_replace("キーボード", "ｷｰﾎﾞｰﾖ", $str);
 $str = preg_replace("/きめ(.)|キメ(.)/u", "ｷﾒ$1", $str);
 $str = str_replace("コンクリート", "ｺﾝｸﾘｯﾖ", $str);
 $str = preg_replace("/(サイコロ)|(さいころ)/u", "ｻｲｺﾖ", $str);
 //$str = str_replace("システム", "ｼｽﾖﾑ", $str);
+$str = str_replace("シュリンク", "ｼｭﾘﾝｸｯ", $str);
 //$str = str_replace("シンクパッド", "ｼﾝｸﾊﾟｯﾖ", $str);
 $str = str_replace("ステーキ", "ｽﾃｯｷ", $str);
 $str = str_replace("スタック", "ｽﾀｯﾎﾟ", $str);
@@ -25,6 +28,7 @@ $str = str_replace("スマートフォン", "ｽﾏｰﾖﾋｮﾝ", $str);
 //$str = str_replace("ストリーム", "ｽﾖﾘｰﾑ", $str);
 $str = str_replace("スーツケース", "ｽｰﾕｹｰｽ", $str);
 $str = str_replace("ダイヤグラム", "ﾀﾞｲﾔｸﾞﾗﾐｭ", $str);
+$str = str_replace("ダンボール", "ﾀﾞﾝﾎﾞｯﾙ", $str);
 //$str = str_replace("デスクトップ", "ﾃﾞｽｸﾖｯﾌﾟ", $str);
 $str = str_replace("テンション", "ﾃﾝﾖﾝ", $str);
 $str = str_replace("ディスプレイ", "ﾃﾞｨｽﾌﾟﾖｲ", $str);
@@ -62,6 +66,7 @@ $str = preg_replace("/(マックブック)|(macbook)/ui", "ﾏｯﾖﾌﾞｯｸ
 $str = preg_replace("/(アイフォーン)|(iPhone)/ui", "ｱｲﾋｮｰﾝ", $str);
 $str = preg_replace("/(アーチ)|(arch)/ui", "ｱﾁｮｰ", $str);
 $str = preg_replace("/(エックスビデオズ)|(エックスビデオ)|(xvideos)|(xvideo)/ui", "ｴｸｽｳﾞｨﾃﾞｵｽﾞ", $str);
+$str = preg_replace("/(オペラ)|(opera)/ui", "ｵﾍﾟｯﾗ", $str);
 $str = preg_replace("/(ギットハブ)|(github)/ui", "ｷﾞｯﾖﾊﾟﾌﾞ", $str);
 $str = preg_replace("/(ジャバスクリプト)|(javascript)/ui", "ｼﾞｬｳﾞｧｽｸｲﾌﾟﾖ", $str);
 $str = preg_replace("/(ツイッター)|(twitter)/ui", "ﾂｲｯﾀ", $str);
