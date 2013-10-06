@@ -9,6 +9,8 @@ function covconv($str) {
 
 ////ひたすら列挙
 $str = str_replace("アイコン", "ｱｲﾖﾝ", $str);
+$str = str_replace("アピール", "ｱｯﾋﾟﾙ", $str);
+$str = str_replace("イメージ", "ｲﾒｯｼﾞ", $str);
 //$str = str_replace("アルゴリズム", "ｵﾙﾖﾘｽﾞﾑ", $str);
 $str = str_replace("ウェブ", "ｳｪｯﾌﾞ", $str);
 $str = str_replace("エナジードリンク", "ｴﾅﾖｰﾄﾞﾘﾝﾎﾟ", $str);
@@ -16,6 +18,7 @@ $str = str_replace("カップル", "ｶﾌﾟﾙ", $str);
 $str = str_replace("カーテン", "ｶｰｯﾃﾝ", $str);
 //$str = str_replace("キーボード", "ｷｰﾎﾞｰﾖ", $str);
 $str = preg_replace("/きめ(.)|キメ(.)/u", "ｷﾒ$1", $str);
+$str = str_replace("クリーニング", "ｸﾘﾆﾝｯ", $str);
 $str = str_replace("コンクリート", "ｺﾝｸﾘｯﾖ", $str);
 $str = preg_replace("/(サイコロ)|(さいころ)/u", "ｻｲｺﾖ", $str);
 //$str = str_replace("システム", "ｼｽﾖﾑ", $str);
@@ -26,6 +29,7 @@ $str = str_replace("スタック", "ｽﾀｯﾎﾟ", $str);
 $str = str_replace("スマホ", "ｽﾏﾋｮ", $str);
 $str = str_replace("スマートフォン", "ｽﾏｰﾖﾋｮﾝ", $str);
 //$str = str_replace("ストリーム", "ｽﾖﾘｰﾑ", $str);
+$str = str_replace("スパークリング", "ｽﾊﾟｰｸﾘﾝｯ", $str);
 $str = str_replace("スーツケース", "ｽｰﾕｹｰｽ", $str);
 $str = str_replace("ダイヤグラム", "ﾀﾞｲﾔｸﾞﾗﾐｭ", $str);
 $str = str_replace("ダンボール", "ﾀﾞﾝﾎﾞｯﾙ", $str);
@@ -39,13 +43,17 @@ $str = str_replace("ハッカソン", "ﾊｯｶﾖﾝ", $str);
 //$str = str_replace("バッテリー", "ﾊﾞｯﾖﾘｰ", $str);
 $str = str_replace("バージョン", "ﾊﾞｼﾞﾖﾝ", $str);
 $str = preg_replace("/(ビヤガーデン)|(ビアガーデン)/u", "ﾋﾞﾔｶﾞﾃﾞｯﾑ", $str);
+$str = str_replace("フィルタリング", "ﾌｨﾙﾀﾘﾝｯ", $str);
 $str = str_replace("ブルートゥース", "ﾌﾞﾙｰﾖｰﾕ", $str);
 $str = str_replace("フロー", "ﾌﾖｰ", $str);
 $str = str_replace("フォロー", "ﾌｮﾛｰ", $str);
-$str = str_replace("プログラミング", "ﾌﾟﾔｸﾞﾛﾐﾝｸﾞ", $str);
+$str = str_replace("プラグイン", "ﾌﾟﾗｷﾞﾝ", $str);
+$str = str_replace("プログラミング", "ﾌﾟﾔｸﾞﾛﾐﾝｯ", $str);
 $str = str_replace("プログラム", "ﾌﾟﾔｸﾞﾛﾑ", $str);
 $str = str_replace("プロフィール", "ﾌﾟﾛﾌｨｯﾙ", $str);
+$str = str_replace("ベストエフォート", "ﾍﾞｽﾄｴﾌｫｯﾄ", $str);
 $str = str_replace("ミステイク", "ﾐｽﾃｯｸ", $str);
+$str = str_replace("メイド", "ﾒｲﾖ", $str);
 $str = str_replace("メール", "ﾒｰﾕ", $str);
 //$str = str_replace("レッドブル", "ﾚｯﾖﾌﾞﾙ", $str);
 $str = str_replace("ロックスター", "ﾛｯﾌﾟｽﾔｰ", $str);
@@ -71,6 +79,7 @@ $str = preg_replace("/(ギットハブ)|(github)/ui", "ｷﾞｯﾖﾊﾟﾌﾞ"
 $str = preg_replace("/(ジャバスクリプト)|(javascript)/ui", "ｼﾞｬｳﾞｧｽｸｲﾌﾟﾖ", $str);
 $str = preg_replace("/(ツイッター)|(twitter)/ui", "ﾂｲｯﾀ", $str);
 $str = preg_replace("/(ツイート)|(tweet)/ui", "ﾂｲｯﾖ", $str);
+$str = preg_replace("/(テレビ)|(TV)/ui", "ﾃｨｰｳﾞｨｰ", $str);
 $str = preg_replace("/(バーチャルボックス)|(virtualbox)|(virtual box)/ui", "ﾊﾞﾁｬｰﾙﾎﾞｸｽ", $str);
 $str = preg_replace("/(マック)|(mac)/ui", "ﾏｯﾖ", $str);
 $str = preg_replace("/(メソッド)|(メゾット)/u", "ﾒｿｯﾖ", $str);
@@ -138,6 +147,7 @@ $str = mb_convert_kana($str,"k","UTF-8");
 
 ////「っ」の重複を回避する
 $str = preg_replace("/っ{2,}/u","っ", $str);
+$str = preg_replace("/ｯっ/u","ｯ", $str);
 
 
 ////先頭の「っ」を削除する（空行対策のため）
